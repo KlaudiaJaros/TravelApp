@@ -3,6 +3,7 @@ package com.napier.travelapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.ImageView;
@@ -25,6 +26,11 @@ public class MainActivity extends AppCompatActivity {
         RadioButton rb2 = (RadioButton) findViewById(R.id.radioButton3);
         rb2.setOnClickListener(radioGroupClick);
 
+        Log.e(getResources().getString(R.string.app_name), "Error message test to be shown by LogCat");
+        Log.d(getResources().getString(R.string.app_name), "Debug message test to be shown by LogCat");
+        Log.i(getResources().getString(R.string.app_name), "Info message test to be shown by Logcat");
+        Log.v(getResources().getString(R.string.app_name),"Verbose message test to be shown in LogCat");
+        Log.w(getResources().getString(R.string.app_name), "Warning message test to be shown in LogCat");
 
     }
     private View.OnClickListener radioGroupClick = new View.OnClickListener(){
